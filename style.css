@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  background-color: hsl(180, 8%, 52%);
+  border-radius: 50%;
+}
+
+body {
+  background-color: hsl(180, 52%, 96%);
+}
+
+.background {
+  background-image: url("images/bg-header-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  background-color: hsl(180, 29%, 50%);
+  width: 100%;
+  height: 100px;
+}
+
+main {
+  padding: 0 10%;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 85px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0px 4px 4px hsl(180, 29%, 50%);
+}
+
+section .course .logo {
+  border-radius: 50%;
+  border: none;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section .course {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+section .details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+section .details .quality {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+section .details .quality div {
+  font-weight: 700;
+}
+
+section .tools {
+  display: flex;
+  gap: 1rem;
+}
+
+section .details .time {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: hsl(180, 8%, 52%);
+  font-weight: 700;
+}
+
+section .tools div {
+  background-color: hsl(180, 31%, 95%);
+  color: hsl(180, 29%, 50%);
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s ease-out;
+}
+
+section .tools div:hover {
+  color: hsl(180, 31%, 95%);
+  background-color: hsl(180, 29%, 50%);
+}
+
+.clickedContent {
+  background-color: white;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  position: absolute;
+  top: 70px;
+  left: 10%;
+  box-shadow: 0px 5px 15px hsl(180, 8%, 52%);
+  border-radius: 5px;
+}
+
+.selected {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.select {
+  background-color: hsl(180, 31%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.select p {
+  padding: 10px;
+}
+
+.select .close {
+  background-color: hsl(180, 29%, 50%);
+  padding: 0.5rem 1rem;
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.select .close:hover {
+  background-color: black;
+}
+
+.clickedContent .clear {
+  cursor: pointer;
+}
+
+.clickedContent .clear:hover {
+  text-decoration: underline;
+}
+
+.class {
+  color: hsl(180, 29%, 50%);
+}
+
+.new {
+  background-color: hsl(180, 29%, 50%);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+
+.featured {
+  background-color: black;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+
+.title {
+  font-weight: 700;
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  main {
+    padding: 0 5%;
+    padding-top: 65px;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  section .course {
+    align-items: stretch;
+    justify-content: left;
+    border-bottom: 2px solid hsla(180, 8%, 52%, 0.5);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  section .course .logo {
+    position: absolute;
+    top: -25px;
+    left: 4%;
+    width: 50px;
+    height: 50px;
+  }
+
+  section .tools {
+    flex-wrap: wrap;
+  }
+}
